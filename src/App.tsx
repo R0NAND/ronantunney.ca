@@ -70,6 +70,7 @@ function App() {
           </a>
         </div>
       </div>
+
       <div className="mb-8">
         <h2 className="text-3xl font-bold mb-4">About Me</h2>
         <p
@@ -94,7 +95,7 @@ function App() {
           }}
           centeredSlides={true}
           pagination={{ clickable: true }}
-          autoplay={{ delay: 5000 }}
+          autoplay={{ delay: 15000 }}
           effect="coverflow"
           coverflowEffect={{
             rotate: 30, // Rotation angle of the slides
@@ -117,7 +118,8 @@ function App() {
                 that persists across multiple sessions. It also comes with many
                 useful features such as a smart tuner, video looper, metronome,
                 autoscroller and more!"
-              image={<img src="/tooner.png" />}
+              image={<video autoPlay loop muted src="/tooner-demo.mp4" />}
+              github="https://github.com/R0NAND/tooner.io"
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -129,7 +131,8 @@ function App() {
                 proved to be quite the challenge, so I took it upon myself to
                 create a react app that used the GPS data of all the photos I
                 took, to create an interactive map of my travels."
-              image={<img src="/travel_map_thumbnail.jpg" />}
+              image={<video autoPlay loop muted src="/travel-map-demo.mp4" />}
+              github="https://github.com/R0NAND/usa-road-trip"
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -142,7 +145,10 @@ function App() {
                 experience in building complex modular software. You can play
                 around with it for yourself at this the angry birds inspired
                 demonstration I've set up here."
-              image={<img src="/physics_engine.jpg" />}
+              image={
+                <video autoPlay loop muted src="/physics-engine-demo.mp4" />
+              }
+              github="https://github.com/R0NAND/physics-engine-js"
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -164,6 +170,7 @@ function App() {
                   src="https://www.youtube.com/embed/wm4oHIMzqq8"
                 ></iframe>
               }
+              github="https://github.com/R0NAND/particle_hydrodynamics"
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -175,12 +182,8 @@ function App() {
               ROS and the Gazebo physics engine, I've been able to set up a few
               different machines in a virtual environment for further
               programming and experimentation."
-              image={
-                <iframe
-                  width="100%"
-                  src="https://www.youtube.com/embed/SqcZDt6xKNg"
-                ></iframe>
-              }
+              image={<a href="./physics-engine/angry_birds.js"></a>}
+              github="https://github.com/R0NAND/gazebo_playground"
             />
           </SwiperSlide>
           <SwiperSlide>

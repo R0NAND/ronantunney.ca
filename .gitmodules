@@ -1,0 +1,6 @@
+[submodule "src/physics-engine-js"]
+	path = src/physics-engine-js
+	url = https://github.com/R0NAND/physics-engine-js.git
+[submodule "public/physics-engine-js"]
+	path = public/physics-engine-js
+	url = https://github.com/R0NAND/physics-engine-js.git

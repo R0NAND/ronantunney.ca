@@ -1,19 +1,27 @@
+import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
 interface Props {
   title: string;
   description: string;
   image: React.ReactNode; // Changed from string to React.ReactNode
+  github?: string;
 }
 
-const ProjectCard = ({ title, description, image }: Props) => {
+const ProjectCard = ({ title, description, image, github = "" }: Props) => {
   return (
-    <div className="md:h-80 bg-slate-900 p-4 mb-4 rounded-xl shadow-xl border-2 border-stone-200">
-      <h3 className="text-2xl mb-2">{title}</h3>
-      <div style={{ float: "left" }} className="w-35">
-        {image /* Render arbitrary HTML or React elements */}
-      </div>
+    <div className="bg-slate-900 p-4 mb-4 rounded-xl shadow-xl border-2 border-stone-200">
+      <h3 className="text-2xl mb-2">
+        {title}{" "}
+        {github !== "" && (
+          <a href={github}>
+            <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
+          </a>
+        )}
+      </h3>
       <p className="text-left">{description}</p>
+      {image}
     </div>
   );
 };
