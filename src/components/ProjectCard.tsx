@@ -19,8 +19,8 @@ const ProjectCard = ({
   link = "",
 }: Props) => {
   return (
-    <div className="bg-slate-900 p-4 mb-4 rounded-xl shadow-xl border-2 border-stone-200">
-      <h3 className="text-2xl mb-2">
+    <div className="bg-gray-900 text-gray-200 p-4 mb-4 rounded-xl shadow-xl border-2 border-gray-400">
+      <h3 className="text-2xl font-bold mb-2">
         {title}{" "}
         {link != "" && (
           <a href={link}>

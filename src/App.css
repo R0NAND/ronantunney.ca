@@ -2,3 +2,16 @@
   --swiper-pagination-bullet-inactive-color: white;
   --swiper-pagination-bullet-inactive-opacity: 0.8;
 }
+
+.timeline-element {
+}
+
+.timeline-element .vertical-timeline-element-content {
+  background-color: var(--color-red-500);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Fjalla One", sans-serif;
+}

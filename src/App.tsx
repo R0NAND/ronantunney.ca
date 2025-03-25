@@ -18,17 +18,19 @@ import {
   faArrowRight,
   faBriefcase,
   faEnvelope,
+  faExternalLink,
   faUserGraduate,
 } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
   return (
-    <div id="app" className="bg-slate-950 text-stone-300 min-w-[320px]">
-      <div className="m-auto w-full bg-gradient-to-b from-green-950 to-bg-slate-950 mb-15">
+    <div id="app" className="bg-gray-950 text-gray-200 min-w-[320px]">
+      <div className="hidden bg-gray-50 bg-gray-100 bg-gray-200 bg-gray-900 bg-gray-800"></div>
+      <div className="m-auto w-full bg-gradient-to-b from-teal-900 to-bg-gray-950 mb-15">
         <div className="m-auto text-center pt-20 pb-10 max-w-[1280px]">
-          <h1 className="text-3xl md:text-7xl font-bold">Ronan Tunney</h1>
+          <h1 className="text-5xl md:text-7xl font-bold">Ronan Tunney</h1>
           <img
-            className="m-auto mt-15 mb-15 w-40 h-40 rounded-full border-2 border-stone-100"
+            className="m-auto mt-15 mb-15 w-40 h-40 rounded-full border-2 border-gray-200"
             src="/my-photo.jpg"
           />
           <ReactTyped
@@ -68,12 +70,9 @@ function App() {
         </div>
       </div>
 
-      <div className="max-w-[1280px] m-auto text-center mb-15">
+      <div className="max-w-[1280px] m-auto text-center mb-15 pr-4 pl-4">
         <h2 className="text-3xl font-bold mb-4">About Me</h2>
-        <p
-          style={{ width: "clamp(45ch, 50%, 75ch)" }}
-          className="text-base text-left m-auto"
-        >
+        <p className="text-base w-74 md:w-100 text-left m-auto">
           Hi! I'm a Waterloo engineering graduate with over 4 years of
           experience developing software solutions in various industries
           including robotics, manufacturing and biomedical devices. Sometimes I
@@ -110,11 +109,11 @@ function App() {
             <ProjectCard
               title="Tooner.io"
               link="https://tooner.io/"
-              description="Tooner.io is a multipage react application that provides
+              description="Tooner.io is a multipage React application that provides
                 musicians with all the tools they need to have high quality
-                practice sessions. It users the browser's local storage to let
+                practice sessions. It leverages the browser's local storage to let
                 users save custom tunings, tutorial playlists and sheet music
-                that persists across multiple sessions. It also comes with many
+                which persists across multiple sessions. It also comes with many
                 useful features such as a smart tuner, video looper, metronome,
                 autoscroller and more!"
               display={<video autoPlay loop muted src="/tooner-demo.mp4" />}
@@ -128,9 +127,9 @@ function App() {
               description="During the summer of 2024 I spent three months on the road,
                 experiencing as many national parks and cities as I could across
                 the States. Upon returning to Canada, recounting this journey
-                proved to be quite the challenge, so I took it upon myself to
-                create a react app that used the GPS data of all the photos I
-                took, to create an interactive map of my travels."
+                proved to be quite the undertaking, so I took it upon myself to
+                create a React app that used the GPS data of all the photos I
+                took to create an interactive map of my travels."
               display={<video autoPlay loop muted src="/travel-map-demo.mp4" />}
               github="https://github.com/R0NAND/usa-road-trip"
             />
@@ -140,12 +139,9 @@ function App() {
               title="Physics Engine"
               link="/physics-engine-js/angry_birds.html"
               description="During the summer of 2020; I found myself stuck inside with lots
-                of free time, so naturally used it to build a rigid body physics
-                engine in javascript (I know....). It's not the most stable or
-                performant engine on the market, but it served as a great learning
-                experience in building complex modular software. You can play
-                around with it for yourself at this the angry birds inspired
-                demonstration I've set up here."
+                of free time. Naturally, I used the opportunity to build a rigid body physics
+                engine entirely from scratch in javascript. It served as a great learning
+                experience in building complex modular software and helped build my confidence as a software developer and problem solver."
               display={
                 <video autoPlay loop muted src="/physics-engine-demo.mp4" />
               }
@@ -156,7 +152,7 @@ function App() {
             <ProjectCard
               title="Fluid Simulations"
               description="Fluid dynamics was one of the main reasons I initially chose to study mechanical
-              engineering. However, I ultimately found myself wanting to go beyond the syllabus and took it upon myself to simulate their behavio. I ended up writing two C++ simulations using very different appraoches, On method used particles to emulate the behavior of a sploshing liquid with surface tension effects, whereas the other simulation used a mesh based approach that behaved more like a swirling gas."
+              engineering. However, I ultimately found myself wanting to go beyond the syllabus and took it upon myself to simulate their behavior. I ended up writing two C++ simulations using very different approaches. One method used particles to emulate the behavior of a sploshing liquid with surface tension effects, whereas the other simulation used a mesh based approach that behaved more like a swirling gas."
               display={
                 <iframe
                   style={{ aspectRatio: 16 / 9 }}
@@ -218,129 +214,169 @@ function App() {
         </Swiper>
       </div>
 
-      <div className="max-w-[1280px] m-auto text-center mb-15">
+      <div className="max-w-[1280px] m-auto text-center pb-15">
         <h2 className="text-4xl font-bold mb-8">Experience</h2>
         <div>
           <VerticalTimeline>
             <VerticalTimelineElement
-              contentStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-              contentArrowStyle={{
-                borderRight: "7px solid  rgb(33, 150, 243)",
+              contentStyle={{
+                background: "var(--color-gray-800)",
+                textAlign: "left",
               }}
               date="Dec 2021 - Apr 2024"
               icon={<FontAwesomeIcon icon={faBriefcase}></FontAwesomeIcon>}
-              iconStyle={{ background: "var(--color-sky-900)" }}
+              iconClassName="bg-sky-900"
             >
-              <h3 className="vertical-timeline-element-title">
-                Intermediate Data Engineer
-              </h3>
-              <h4 className="vertical-timeline-element-subtitle">
-                Abbott, Ottawa, ON
+              <h3 className="font-bold">Intermediate Data Engineer</h3>
+              <h4>
+                Abbott Point of Care{" "}
+                <a href="https://www.globalpointofcare.abbott/ca/en/index.html">
+                  <FontAwesomeIcon icon={faExternalLink}></FontAwesomeIcon>
+                </a>
               </h4>
-              <p></p>
+              <h4>Ottawa, ON</h4>
             </VerticalTimelineElement>
             <VerticalTimelineElement
+              contentStyle={{
+                background: "var(--color-gray-800)",
+                textAlign: "left",
+              }}
               date="Sep 2020 - Dec 2021"
               icon={<FontAwesomeIcon icon={faBriefcase}></FontAwesomeIcon>}
               iconClassName="bg-sky-900"
             >
-              <h3 className="vertical-timeline-element-title">
-                Associate Engineer
-              </h3>
+              <h3 className="font-bold">Associate Engineer</h3>
               <h4 className="vertical-timeline-element-subtitle">
-                Abbott, Ottawa, ON
+                Abbott Point of Care{" "}
+                <a href="https://www.globalpointofcare.abbott/ca/en/index.html">
+                  <FontAwesomeIcon icon={faExternalLink}></FontAwesomeIcon>
+                </a>
               </h4>
-              <p></p>
+              <h4>Ottawa, ON</h4>
             </VerticalTimelineElement>
             <VerticalTimelineElement
+              contentStyle={{
+                background: "var(--color-gray-800)",
+                textAlign: "left",
+              }}
               date="September 2015 - April 2020"
               icon={<FontAwesomeIcon icon={faUserGraduate}></FontAwesomeIcon>}
               iconClassName="bg-sky-900"
             >
-              <h3 className="vertical-timeline-element-title">
-                University of Waterloo
-              </h3>
-              <h4 className="vertical-timeline-element-subtitle">
+              <h3 className="font-bold">University of Waterloo</h3>
+              <h4>
                 Mechanical Engineering with options in Mechatronics and
                 Management
               </h4>
               <p>Graduated with distinction and on Dean's Honours List</p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
+              contentStyle={{
+                background: "var(--color-gray-800)",
+                textAlign: "left",
+              }}
               date="Apr 2019 – Aug 2019"
               icon={<FontAwesomeIcon icon={faBriefcase}></FontAwesomeIcon>}
               iconClassName="bg-sky-900"
             >
-              <h3 className="vertical-timeline-element-title">
-                Robotics Developer
-              </h3>
-              <h4 className="vertical-timeline-element-subtitle">
-                Ontario Die International, Kitchener, ON
+              <h3 className="font-bold">Robotics Developer</h3>
+              <h4>
+                Ontario Die International{" "}
+                <a href="https://www.ontariodie.com/">
+                  <FontAwesomeIcon icon={faExternalLink}></FontAwesomeIcon>
+                </a>
               </h4>
-              <p></p>
+              <h4>Kitchener, ON</h4>
             </VerticalTimelineElement>
             <VerticalTimelineElement
+              contentStyle={{
+                background: "var(--color-gray-800)",
+                textAlign: "left",
+              }}
               date="Aug 2018 – Dec 2018"
               icon={<FontAwesomeIcon icon={faBriefcase}></FontAwesomeIcon>}
               iconClassName="bg-sky-900"
             >
-              <h3 className="vertical-timeline-element-title">
-                Infrastructure Software Developer
-              </h3>
-              <h4 className="vertical-timeline-element-subtitle">
-                Avidbots, Kitchener, ON
+              <h3 className="font-bold">Infrastructure Software Developer</h3>
+              <h4>
+                Avidbots{" "}
+                <a href="https://avidbots.com/">
+                  <FontAwesomeIcon icon={faExternalLink}></FontAwesomeIcon>
+                </a>
               </h4>
-              <p></p>
+              <h4>Kitchener, ON</h4>
             </VerticalTimelineElement>
             <VerticalTimelineElement
+              contentStyle={{
+                background: "var(--color-gray-800)",
+                textAlign: "left",
+              }}
               date="Jan 2018 - Apr 2018"
               icon={<FontAwesomeIcon icon={faBriefcase}></FontAwesomeIcon>}
               iconClassName="bg-sky-900"
             >
-              <h3 className="vertical-timeline-element-title">
-                Product Development Student
-              </h3>
-              <h4 className="vertical-timeline-element-subtitle">
-                TE Connectivity, Markham, ON
+              <h3 className="font-bold">Product Development Student</h3>
+              <h4>
+                TE Connectivity{" "}
+                <a href="https://www.te.com/en/home.html">
+                  <FontAwesomeIcon icon={faExternalLink}></FontAwesomeIcon>
+                </a>
               </h4>
-              <p></p>
+              <h4>Markham, ON</h4>
             </VerticalTimelineElement>
             <VerticalTimelineElement
+              contentStyle={{
+                background: "var(--color-gray-800)",
+                textAlign: "left",
+              }}
               date="May 2017 - Aug 2017"
               icon={<FontAwesomeIcon icon={faBriefcase}></FontAwesomeIcon>}
               iconClassName="bg-sky-900"
             >
-              <h3 className="vertical-timeline-element-title">Data Analyst</h3>
-              <h4 className="vertical-timeline-element-subtitle">
-                National Research Council, Ottawa, ON
+              <h3 className="font-bold">Data Analyst</h3>
+              <h4>
+                National Research Council{" "}
+                <a href="https://nrc.canada.ca/en/">
+                  <FontAwesomeIcon icon={faExternalLink}></FontAwesomeIcon>
+                </a>
               </h4>
-              <p></p>
+              <h4>Ottawa, ON</h4>
             </VerticalTimelineElement>
             <VerticalTimelineElement
+              contentStyle={{
+                background: "var(--color-gray-800)",
+                textAlign: "left",
+              }}
               date="Sep 2016 - Dec 2016"
               icon={<FontAwesomeIcon icon={faBriefcase}></FontAwesomeIcon>}
               iconClassName="bg-sky-900"
             >
-              <h3 className="vertical-timeline-element-title">
-                Applications Engineering Student
-              </h3>
+              <h3 className="font-bold">Applications Engineering Student</h3>
               <h4 className="vertical-timeline-element-subtitle">
-                Bosch Rexroth, Welland, ON
+                Bosch Rexroth{" "}
+                <a href="https://www.boschrexroth.com/en/ca/">
+                  <FontAwesomeIcon icon={faExternalLink}></FontAwesomeIcon>
+                </a>
               </h4>
-              <p></p>
+              <h4>Welland, ON</h4>
             </VerticalTimelineElement>
             <VerticalTimelineElement
+              contentStyle={{
+                background: "var(--color-gray-800)",
+                textAlign: "left",
+              }}
               date="Jan 2016 - Apr 2016"
               icon={<FontAwesomeIcon icon={faBriefcase}></FontAwesomeIcon>}
               iconClassName="bg-sky-900"
             >
-              <h3 className="vertical-timeline-element-title">
-                Projects Support Student
-              </h3>
-              <h4 className="vertical-timeline-element-subtitle">
-                MDS Aero, Ottawa, ON
+              <h3 className="font-bold">Projects Support Student</h3>
+              <h4>
+                MDS Aero{" "}
+                <a href="https://mdsaero.com/">
+                  <FontAwesomeIcon icon={faExternalLink}></FontAwesomeIcon>
+                </a>
               </h4>
-              <p></p>
+              <h4>Ottawa, ON</h4>
             </VerticalTimelineElement>
           </VerticalTimeline>
         </div>
