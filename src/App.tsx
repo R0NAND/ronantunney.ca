@@ -35,7 +35,7 @@ function App() {
           />
           <ReactTyped
             className="text-3xl font-bold"
-            strings={["Engineer", "Developer", "Analyst", "Communicator"]}
+            strings={["Developer", "Problem Solver", "Communicator"]}
             typeSpeed={50}
             backSpeed={30}
             loop
