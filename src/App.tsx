@@ -35,7 +35,7 @@ function App() {
           />
           <ReactTyped
             className="text-3xl font-bold"
-            strings={["Developer", "Problem Solver", "Communicator"]}
+            strings={["Developer", "Problem Solver", "Communicator", "Anaylst"]}
             typeSpeed={50}
             backSpeed={30}
             loop
@@ -109,50 +109,59 @@ function App() {
             <ProjectCard
               title="Tooner.io"
               link="https://tooner.io/"
-              description="Tooner.io is a multipage React application that provides
-                musicians with all the tools they need to have high quality
-                practice sessions. It leverages the browser's local storage to let
-                users save custom tunings, tutorial playlists and sheet music
-                which persists across multiple sessions. It also comes with many
-                useful features such as a smart tuner, video looper, metronome,
-                autoscroller and more!"
               display={<video autoPlay loop muted src="/tooner-demo.mp4" />}
               github="https://github.com/R0NAND/tooner.io"
-            />
+            >
+              <p className="text-left">
+                Tooner.io is a multipage React application that provides
+                musicians with all the tools they need to have high quality
+                practice sessions. It leverages the browser's local storage to
+                let users save custom tunings, tutorial playlists and sheet
+                music which persists across multiple sessions. It also comes
+                with many useful features such as a smart tuner, video looper,
+                metronome, autoscroller and more!
+              </p>
+            </ProjectCard>
           </SwiperSlide>
           <SwiperSlide>
             <ProjectCard
               title="Road Trip Map"
               link="https://usa-road-trip.ronantunney.ca/"
-              description="During the summer of 2024 I spent three months on the road,
+              display={<video autoPlay loop muted src="/travel-map-demo.mp4" />}
+              github="https://github.com/R0NAND/usa-road-trip"
+            >
+              <p className="text-left">
+                During the summer of 2024 I spent three months on the road,
                 experiencing as many national parks and cities as I could across
                 the States. Upon returning to Canada, recounting this journey
                 proved to be quite the undertaking, so I took it upon myself to
                 create a React app that used the GPS data of all the photos I
-                took to create an interactive map of my travels."
-              display={<video autoPlay loop muted src="/travel-map-demo.mp4" />}
-              github="https://github.com/R0NAND/usa-road-trip"
-            />
+                took to create an interactive map of my travels.
+              </p>
+            </ProjectCard>
           </SwiperSlide>
           <SwiperSlide>
             <ProjectCard
               title="Physics Engine"
               link="/physics-engine-js/angry_birds.html"
-              description="During the summer of 2020; I found myself stuck inside with lots
-                of free time. Naturally, I used the opportunity to build a rigid body physics
-                engine entirely from scratch in javascript. It served as a great learning
-                experience in building complex modular software and helped build my confidence as a software developer and problem solver."
               display={
                 <video autoPlay loop muted src="/physics-engine-demo.mp4" />
               }
               github="https://github.com/R0NAND/physics-engine-js"
-            />
+            >
+              <p className="text-left">
+                During the summer of 2020; I found myself stuck inside with lots
+                of free time. Naturally, I used the opportunity to build a rigid
+                body physics engine entirely from scratch in javascript. It
+                served as a great learning experience in building complex
+                modular software and helped build my confidence as a software
+                developer and problem solver.
+              </p>
+            </ProjectCard>
           </SwiperSlide>
           <SwiperSlide>
             <ProjectCard
               title="Fluid Simulations"
-              description="Fluid dynamics was one of the main reasons I initially chose to study mechanical
-              engineering. However, I ultimately found myself wanting to go beyond the syllabus and took it upon myself to simulate their behavior. I ended up writing two C++ simulations using very different approaches. One method used particles to emulate the behavior of a sploshing liquid with surface tension effects, whereas the other simulation used a mesh based approach that behaved more like a swirling gas."
               display={
                 <iframe
                   style={{ aspectRatio: 16 / 9 }}
@@ -162,17 +171,29 @@ function App() {
                 ></iframe>
               }
               github="https://github.com/R0NAND/particle_hydrodynamics"
-            />
+            >
+              <p className="text-left">
+                Fluid dynamics was one of the main reasons I initially chose to
+                study mechanical engineering, and I chose to give myself the
+                challenge of simulating them during my undergrad. I ended up
+                writing two C++ simulations using very different approaches. One
+                method used particles to emulate the behavior of a sploshing
+                liquid with surface tension effects, whereas the other
+                simulation used a mesh based approach that behaved more like a
+                swirling gas. I'm currently also working on an improved 3D
+                hardware accelerated fluid simulation{" "}
+                <a
+                  className="underline font-bold"
+                  href="https://sph-fluid-sim.ronantunney.ca/"
+                >
+                  here.
+                </a>
+              </p>
+            </ProjectCard>
           </SwiperSlide>
           <SwiperSlide>
             <ProjectCard
               title="Robot Simulations"
-              description="Programming Robot behaviour and algorithms is a lot of fun, but
-              unfortunately, the cost and risks associated with them can be a
-              limitation. That's why I thought I'd try simulating them! Using
-              ROS and the Gazebo physics engine, I've been able to set up a few
-              different machines in a virtual environment for further
-              programming and experimentation."
               display={
                 <iframe
                   style={{ aspectRatio: 16 / 9 }}
@@ -181,15 +202,20 @@ function App() {
                 ></iframe>
               }
               github="https://github.com/R0NAND/gazebo_playground"
-            />
+            >
+              <p className="text-left">
+                Programming Robot behaviour and algorithms is a lot of fun, but
+                unfortunately, the cost and risks associated with them can be a
+                limitation. That's why I thought I'd try simulating them! Using
+                ROS and the Gazebo physics engine, I've been able to set up a
+                few different machines in a virtual environment for further
+                programming and experimentation.
+              </p>
+            </ProjectCard>
           </SwiperSlide>
           <SwiperSlide>
             <ProjectCard
               title="Mechatronics Projects"
-              description="During my undergrad, I'd spent some time tinkering with
-              electronics on the side to complement my studies. I've included
-              some videos of these projects below. They were all built using an
-              Arduino and various other basic electronic components."
               display={
                 <div className="flex flex-wrap">
                   <iframe
@@ -209,7 +235,14 @@ function App() {
                   ></iframe>
                 </div>
               }
-            />
+            >
+              <p className="text-left">
+                During my undergrad, I'd spent some time tinkering with
+                electronics on the side to complement my studies. I've included
+                some videos of these projects below. They were all built using
+                an Arduino and various other basic electronic components.
+              </p>
+            </ProjectCard>
           </SwiperSlide>
         </Swiper>
       </div>

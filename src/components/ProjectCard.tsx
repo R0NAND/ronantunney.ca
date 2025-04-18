@@ -5,18 +5,18 @@ import React from "react";
 
 interface Props {
   title: string;
-  description: string;
   display: React.ReactNode; // Changed from string to React.ReactNode
   github?: string;
   link?: string;
+  children: React.ReactNode; // Added children prop
 }
 
 const ProjectCard = ({
   title,
-  description,
   display,
   github = "",
   link = "",
+  children,
 }: Props) => {
   return (
     <div className="bg-gray-900 text-gray-200 p-4 mb-4 rounded-xl shadow-xl border-2 border-gray-400">
@@ -33,7 +33,7 @@ const ProjectCard = ({
           </a>
         )}
       </h3>
-      <p className="text-left">{description}</p>
+      {children}
       {display}
     </div>
   );
