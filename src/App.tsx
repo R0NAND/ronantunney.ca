@@ -92,7 +92,7 @@ function App() {
           }}
           centeredSlides={true}
           pagination={{ clickable: true }}
-          autoplay={{ delay: 15000 }}
+          autoplay={{ delay: 20000 }}
           effect="coverflow"
           coverflowEffect={{
             rotate: 30, // Rotation angle of the slides
@@ -105,6 +105,46 @@ function App() {
           loop={true}
           className="w-full"
         >
+          <SwiperSlide>
+            <ProjectCard
+              title="SwashGPU"
+              link="https://swash-gpu.ronantunney.ca/"
+              display={<video autoPlay loop muted src="/swash-demo.mp4" />}
+              github="https://github.com/R0NAND/SwashGPU"
+            >
+              <p className="text-left">
+                Several years ago, I'd written two fluid simulations in C++, but
+                have recently reimplemented them with hardware acceleration in
+                browser using the WebGPU API. One of these methods uses a
+                technique known as Smoothed Particle Hydrodynamics (SPH), where
+                particles contribute to a density and pressure field within a
+                certain radius of influence and are accelerated as per this
+                field's gradient as well as other forces like viscosity and
+                surface tension. Make sure to use an updated version of google
+                chrome when trying out the demo!
+              </p>
+            </ProjectCard>
+          </SwiperSlide>
+          <SwiperSlide>
+            <ProjectCard
+              title="SwirlGPU"
+              link="https://swirl-gpu.ronantunney.ca/"
+              display={<video autoPlay loop muted src="/swirl-demo.mp4" />}
+              github="https://github.com/R0NAND/SwirlGPU"
+            >
+              <p className="text-left">
+                Several years ago, I'd written two fluid simulations in C++, but
+                have recently reimplemented them with hardware acceleration in
+                browser using the WebGPU API. One of these methods uses a
+                uniform grid where neighboring cells exchange field values via,
+                viscous, diffusive and advective interactions each timestep.
+                Additionally, the pressure field is solved for each iteration,
+                such that the fluid velocities can be corrected to respect the
+                incompressibility condition. Make sure to use an updated version
+                of google chrome when trying out the demo!
+              </p>
+            </ProjectCard>
+          </SwiperSlide>
           <SwiperSlide>
             <ProjectCard
               title="Tooner.io"
@@ -156,38 +196,6 @@ function App() {
                 served as a great learning experience in building complex
                 modular software and helped build my confidence as a software
                 developer and problem solver.
-              </p>
-            </ProjectCard>
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProjectCard
-              title="Fluid Simulations"
-              display={
-                <iframe
-                  style={{ aspectRatio: 16 / 9 }}
-                  width="100%"
-                  src="https://www.youtube.com/embed/wm4oHIMzqq8?autoplay=1"
-                  allow="autoplay"
-                ></iframe>
-              }
-              github="https://github.com/R0NAND/particle_hydrodynamics"
-            >
-              <p className="text-left">
-                Fluid dynamics was one of the main reasons I initially chose to
-                study mechanical engineering, and I chose to give myself the
-                challenge of simulating them during my undergrad. I ended up
-                writing two C++ simulations using very different approaches. One
-                method used particles to emulate the behavior of a sploshing
-                liquid with surface tension effects, whereas the other
-                simulation used a mesh based approach that behaved more like a
-                swirling gas. I'm currently also working on an improved 3D
-                hardware accelerated fluid simulation{" "}
-                <a
-                  className="underline font-bold"
-                  href="https://sph-fluid-sim.ronantunney.ca/"
-                >
-                  here.
-                </a>
               </p>
             </ProjectCard>
           </SwiperSlide>
