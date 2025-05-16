@@ -276,6 +276,12 @@ function App() {
                 </a>
               </h4>
               <h4>Ottawa, ON</h4>
+              <ul className="list-disc pl-6">
+                <li>Developed a .NET-based wafer-map editor to replace legacy 32-bit tooling, eliminating VM dependencies and streamlining editing across three file encoding formats. Empowered engineers with database integration, template overlays, edge exclusion tools, and undo/redo support.</li>
+                <li>Architected a version-aware installer and update system using Squirrel, enabling seamless Dev/Val/Prod deployment and side-by-side installs - cutting update and deployment time for internal apps.</li>
+                <li>Revamped the data engineering team’s core .NET library used in Equipment Integration Apps, reducing latency and improving UX through performance tuning, bug fixes, and custom WPF control rework.</li>
+                <li>Integrated a Filmetrics F40 spectrometer with a C++ wafer inspection GUI by wrapping vendor DLLs in a C interface and running it in a separate thread for real-time measurements and calibration.</li>
+              </ul>
             </VerticalTimelineElement>
             <VerticalTimelineElement
               contentStyle={{
@@ -294,6 +300,11 @@ function App() {
                 </a>
               </h4>
               <h4>Ottawa, ON</h4>
+              <ul className="list-disc pl-6">
+                <li>Met stringent deadlines leading the development, validation and deployment of three R packages which formed the backbone of a generalized ETL pipeline. Earned promotion for strong performance.</li>
+                <li>Generated thousands of finished goods and qualification reports for various blood testing cartridges using R and Microsoft SQL Server to develop a dynamic data processing and statistical analysis backend.</li>
+                <li>Eliminated engineering time taken for the calibration of cardiac marker blood testing products by writing a multidimensional optimization algorithm in C++ which consistently delivered best results.</li>
+              </ul>
             </VerticalTimelineElement>
             <VerticalTimelineElement
               contentStyle={{
@@ -309,7 +320,8 @@ function App() {
                 Mechanical Engineering with options in Mechatronics and
                 Management
               </h4>
-              <p>Graduated with distinction and on Dean's Honours List</p>
+              <p>Graduated with distinction, on Dean's Honours List and as a USports Academic All-Canadian</p>
+              <p><span className="font-bold">Relevant courses:</span> Data Structures and Algorithms, Microprocessors and Digital Logic, Embedded Systems, Digital Control Applications, Computational Fluid Dynamics, Finite Element Analysis, Fluid Power Control Systems, Mechanical Design</p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
               contentStyle={{
@@ -328,6 +340,7 @@ function App() {
                 </a>
               </h4>
               <h4>Kitchener, ON</h4>
+              <p>Reviewed and tested the effectiveness of new software features on an autonomous steel bending robot. Proposed and launched a sensor/perception playback system to empoyer other testers. Developed a steel bend deformation logger in C++ for machine learning purposes.</p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
               contentStyle={{
@@ -346,6 +359,15 @@ function App() {
                 </a>
               </h4>
               <h4>Kitchener, ON</h4>
+              <p>Deployed various infrastructural improvements to robots' software including: 
+                <ul className="list-disc pl-6">
+                  <li>Simulation mode bug fixes in C++</li>
+                  <li>File backup and restoration with Python</li>
+                  <li>Smart dependency handler with Python and Docker</li>
+                  <li>Regression testing build pipelines with Jenkins, Bash and Docker</li>
+                  <li>Firmware updates to robots and sensors</li>
+                </ul>
+              </p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
               contentStyle={{
@@ -364,6 +386,7 @@ function App() {
                 </a>
               </h4>
               <h4>Markham, ON</h4>
+              <p>Single handedly prepared and executed dozens of test protocols qualifying the photometric properties of ambient lighting products. Designed and 3D printed fixtures with Creo when custom lab equipment was needed.</p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
               contentStyle={{
@@ -382,6 +405,7 @@ function App() {
                 </a>
               </h4>
               <h4>Ottawa, ON</h4>
+              <p>Established a novel energy estimation method for government buildings, which was projected to save hundreds of thousands of dollars. Used machine learning to generate 99%+ accurate occupancy detection models.</p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
               contentStyle={{
@@ -400,6 +424,7 @@ function App() {
                 </a>
               </h4>
               <h4>Welland, ON</h4>
+              <p>Drafted CAD Parts and rendered hydraulic units for display in Autodesk. Developed a tightening torque application for assembly bolts under varying lubrication conditions and bolt types.</p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
               contentStyle={{
@@ -411,13 +436,14 @@ function App() {
               iconClassName="bg-sky-900"
             >
               <h3 className="font-bold">Projects Support Student</h3>
-              <h4>
+              <h4 className="vertical-timeline-element-subtitle">
                 MDS Aero{" "}
                 <a href="https://mdsaero.com/">
                   <FontAwesomeIcon icon={faExternalLink}></FontAwesomeIcon>
                 </a>
               </h4>
               <h4>Ottawa, ON</h4>
+              <p>Authored and inspected dozens of internal and external technical reports, presentations and spreadsheets by working cross-functionally across engineering teams.</p>
             </VerticalTimelineElement>
           </VerticalTimeline>
         </div>
